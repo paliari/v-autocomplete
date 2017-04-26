@@ -3,14 +3,14 @@ div(style="padding-top: 50px; text-align: center;")
   h1 DEMO v-autocomplete
 
   div(style='margin: auto; width: 200px; background-color: #a8c2de')
-    v-autocomplete(:items="items" v-model='item', :get-label='getLabel', @updateItems='update')
+    v-autocomplete(:items="items" v-model='item', :get-label='getLabel', @updateItems='update', :component-item='tpl')
 
   p item: {{ item }}
-  pre text: {{ text }}
 </template>
 
 <script>
 import Autocomplete from '../src/Autocomplete.vue'
+import tpl from './TplItem.vue'
 
 export default {
   name: 'demo',
@@ -19,7 +19,7 @@ export default {
     return {
       item: {label: 'Item 4', id: 4},
       items: [],
-      text: ''
+      tpl: tpl
     }
   },
   methods: {
@@ -27,14 +27,16 @@ export default {
       return item.label
     },
     update (text) {
-      this.text = this.text + "\n" + Date.now() + ": " + text
+      console.log('updateItems')
+      this.items = []
+      let len = Math.round(Math.random() * 10)
+      for (let i = 0; i < len; i++) {
+        this.items.push({label: 'Item ' + i, id: i})
+      }
     }
   },
   created () {
-    for (let i = 0; i < 30; i++) {
-      this.items.push({label: 'Item ' + i, id: i})
-    }
-    window.a = this
+    this.update()
   }
 }
 </script>
