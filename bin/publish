@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+git up
+npm version patch
+git push -v --progress
+git push --tags
+npm publish
