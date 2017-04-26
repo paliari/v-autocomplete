@@ -1,0 +1,26 @@
+{
+  "name": "v-autocomplete",
+  "version": "0.0.1",
+  "description": "Autocomplete component for Vue.js",
+  "author": "Marcos Paliari <marcos@paliari.com.br>",
+  "main": "dist/v-autocomplete.js",
+  "license": "MIT",
+  "scripts": {
+    "dist": "vue build ./src/v-autocomplete.js --config ./build.config.js --dist ./dist/ --prod --lib",
+    "dist:demo": "vue build ./src/demo.vue --config ./build.config.js --dist ./demo/ --prod",
+    "build": "npm run dist -- --disable-compress",
+    "start": "npm run dev",
+    "dev": "vue build ./src/demo.vue --config ./build.config.js",
+    "demo:open": "open 'http://localhost:3000/'; serve ./demo/"
+  },
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "vue",
+    "autocomplete",
+    "vue-autocomplete",
+    "autocomplete-vue",
+    "v-autocomplete"
+  ]
+}
