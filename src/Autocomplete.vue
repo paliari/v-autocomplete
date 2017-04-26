@@ -84,6 +84,7 @@ export default {
       let item = utils.findItem(this.items, this.searchText, this.getLabel)
       if (item) {
         this.onSelectItem(item)
+        this.showList = false
       }
     },
     value (newValue) {
