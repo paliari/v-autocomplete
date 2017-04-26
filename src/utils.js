@@ -21,10 +21,5 @@ export default {
     if (items.length == 1) {
       return items[0]
     }
-    for (let item of items) {
-      if (getLabel(item).toLowerCase() == text.toLowerCase()) {
-        return item
-      }
-    }
   }
 }
