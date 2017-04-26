@@ -81,66 +81,15 @@ methods: {
 
 ### Params
 
-```html
-<table width="100%" cellspacing="0" cellpadding="10" border="1">
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Default value</th>
-        <th>Info</th>
-    </tr>
-    <tr>
-        <td>items</td>
-        <td>Array</td>
-        <td>Yes</td>
-        <td></td>
-        <td>List items</td>
-    </tr>
-    <tr>
-        <td>componentItem</td>
-        <td>Vue Component|Function|String</td>
-        <td>No</td>
-        <td>Item</td>
-        <td>Template of item list</td>
-    </tr>
-    <tr>
-        <td>placeholder</td>
-        <td>String</td>
-        <td>No</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>minLen</td>
-        <td>Number</td>
-        <td>No</td>
-        <td>3</td>
-        <td>Min length to input search call 'updateItems' event</td>
-    </tr>
-    <tr>
-        <td>wait</td>
-        <td>String</td>
-        <td>No</td>
-        <td>500</td>
-        <td>Wait of input change before call 'updateItems' event</td>
-    </tr>
-    <tr>
-        <td>getLabel</td>
-        <td>Function</td>
-        <td>No</td>
-        <td>function(item) { return item } </td>
-        <td>Custom function to extract label of item</td>
-    </tr>
-    <tr>
-        <td>value</td>
-        <td>Mixed</td>
-        <td>No</td>
-        <td></td>
-        <td>Initial value (use v-model)</td>
-    </tr>
-</table>
-```
+| Name          | Type                                | Required | Default value                  | Info                                                 |
+|---------------|-------------------------------------|----------|--------------------------------|------------------------------------------------------|
+| items         | Array                               | Yes      |                                | List items                                           |
+| componentItem | Vue Component or Function or String | No       | Item                           | Template of item list                                |
+| placeholder   | String                              | No       |                                |                                                      |
+| minLen        | Number                              | No       | 3                              | Min length to input search call 'updateItems' event  |
+| wait          | String                              | No       | 500                            | Wait of input change before call 'updateItems' event |
+| getLabel      | Function                            | No       | function(item) { return item } | Custom function to extract label of item             |
+| value         | Mixed                               | No       |                                | Initial value (use v-model)                          |
 
 License
 -------
