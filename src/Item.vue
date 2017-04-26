@@ -1,5 +1,5 @@
 <template lang="pug">
-div {{item.label}}
+div {{item}}
 </template>
 
 <script>
