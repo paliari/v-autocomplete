@@ -43,10 +43,6 @@ export default {
       this.showList = true
       this.onSelectItem(null)
       utils.callUpdateItems(this.searchText, this.updateItems)
-      let item = utils.findItem(this.internalItems, this.searchText, this.getLabel)
-      if (item) {
-        this.onSelectItem(item)
-      }
       this.$emit('change', this.searchText)
     },
 
@@ -85,6 +81,10 @@ export default {
   watch: {
     items (newValue) {
       this.setItems(newValue)
+      let item = utils.findItem(this.items, this.searchText, this.getLabel)
+      if (item) {
+        this.onSelectItem(item)
+      }
     },
     value (newValue) {
       this.onSelectItem(newValue)
