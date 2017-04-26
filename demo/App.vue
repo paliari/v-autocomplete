@@ -17,6 +17,7 @@ export default {
   components: {'v-autocomplete': Autocomplete},
   data () {
     return {
+      itemsApi: [],
       item: {label: 'Item 4', id: 4},
       items: [],
       tpl: tpl
@@ -27,16 +28,15 @@ export default {
       return item.label
     },
     update (text) {
-      console.log('updateItems')
-      this.items = []
-      let len = Math.round(Math.random() * 10)
-      for (let i = 0; i < len; i++) {
-        this.items.push({label: 'Item ' + i, id: i})
-      }
+      this.items = this.itemsApi.filter((item) => {
+        return (new RegExp(text)).test(item.label)
+      })
     }
   },
   created () {
-    this.update()
+    for (let i = 0; i < 50; i++) {
+      this.itemsApi.push({label: 'Item ' + i, id: i})
+    }
   }
 }
 </script>
