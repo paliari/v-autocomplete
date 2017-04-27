@@ -1,7 +1,8 @@
 <template lang="pug">
 div
   b \#{{item.id}}
-  span  {{ item.label }}
+  span  {{ item.name }}
+  abbr {{item.description}}
 </template>
 
 <script>
