@@ -1,13 +1,10 @@
-v-autocomplete
-==============
+# v-autocomplete
+---
 
 > Autocomplete component for Vue.js
 
-Usage
-=====
 
-Installation
-------------
+## Installation
 
 ### Using yarn
 
@@ -17,13 +14,12 @@ Installation
 
 `npm i --save v-autocomplete`
 
-Demo
-----
+## Demo
 
 [DEMO](http://paliari.github.io/v-autocomplete)
 
-Usage
------
+## Usage
+
 
 ### Bundler (Webpack, Rollup)
 
@@ -49,49 +45,61 @@ Vue.use(Autocomplete)
 </script>
 ```
 
-### Usage example
+### Example
 
 ```html
-<!-- in your component -->
-<v-autocomplete :items="items" v-model="item" :get-label="getLabel" @updateItems="updateItems">
-</v-autocomplete>
-```
+<template>
+  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" @update-items="updateItems">
+  </v-autocomplete>
+</template>
 
-```js
-// in your component
-// ...
-data () {
-  return {
-    item: {label: 'Item 4', id: 4},
-    items: []
-  }
-},
-methods: {
-  getLabel (item) {
-    return item.label
+<script>
+export default {
+  data () {
+    return {
+      item: {id: 4, label: 'Item 4'},
+      items: []
+    }
   },
-  updateItems (text) {
-    yourGetItemsMethod(text).then( (response) => {
-      this.items = response
-    })
+  methods: {
+    getLabel (item) {
+      return item.label
+    },
+    updateItems (text) {
+      yourGetItemsMethod(text).then( (response) => {
+        this.items = response
+      })
+    }
   }
-},
-// ...
+}
+</script>
 ```
 
-### Params
+## Properties
 
-| Name          | Type                                | Required | Default value                  | Info                                                 |
-|---------------|-------------------------------------|----------|--------------------------------|------------------------------------------------------|
-| items         | Array                               | Yes      |                                | List items                                           |
-| componentItem | Vue Component or Function or String | No       | Item                           | Template of item list                                |
-| placeholder   | String                              | No       |                                |                                                      |
-| minLen        | Number                              | No       | 3                              | Min length to input search call 'updateItems' event  |
-| wait          | String                              | No       | 500                            | Wait of input change before call 'updateItems' event |
-| getLabel      | Function                            | No       | function(item) { return item } | Custom function to extract label of item             |
-| value         | Mixed                               | No       |                                | Initial value (use v-model)                          |
+| Name               | Type                                | Required | Default value                  | Info                                                   |
+|--------------------|-------------------------------------|----------|--------------------------------|--------------------------------------------------------|
+| **items**          | Array                               | Yes      |                                | List items                                             |
+| **component-item** | Vue Component or Function or String | No       | Item                           | Item list template                                     |
+| **placeholder**    | String                              | No       |                                |                                                        |
+| **min-len**        | Number                              | No       | 3                              | Min length to trigger the *updateItems* event          |
+| **wait**           | String                              | No       | 500                            | Miliseconds dela to trigger the *updateItems* event    |
+| **get-label**      | Function                            | No       | function(item) { return item } | Anonymous function to extract label of the item        |
+| **value**          | Mixed                               | No       |                                | Initial value (use v-model)                            |
 
-License
--------
+## Events
+
+| Name               | Params                       | Info                                                   |
+|--------------------|------------------------------|--------------------------------------------------------|
+| **change**         | *text*: Text of search input | Triggered after every change in the search input       |
+| **update-items**   | *text*: Text of search input | Same as *change*, but respecting *min-len* and *wait*  |
+
+
+## Authors
+
+- [Marcos Paliari](http://paliari.com)
+- [Daniel Fernando Lourusso](http://dflourusso.com.br)
+
+## License
 
 This project is licensed under [MIT License](http://en.wikipedia.org/wiki/MIT_License)
