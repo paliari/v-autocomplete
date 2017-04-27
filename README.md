@@ -49,21 +49,23 @@ Vue.use(Autocomplete)
 
 ```html
 <template>
-  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" @update-items="updateItems">
+  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems">
   </v-autocomplete>
 </template>
 
 <script>
+import ItemTemplate from './ItemTemplate.vue'
 export default {
   data () {
     return {
-      item: {id: 4, label: 'Item 4'},
-      items: []
+      item: {id: 9, name: 'Lion', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
+      items: [],
+      template: ItemTemplate
     }
   },
   methods: {
     getLabel (item) {
-      return item.label
+      return item.name
     },
     updateItems (text) {
       yourGetItemsMethod(text).then( (response) => {
@@ -71,6 +73,24 @@ export default {
       })
     }
   }
+}
+</script>
+```
+
+**ItemTemplate example:**
+
+```html
+<template>
+  <div>
+    <b>#{{item.id}}</b>
+    <span>{{ item.name }}</span>
+    <abbr>{{item.description}}</abbr>
+  </div>
+</template>
+
+<script>
+export default {
+  props: { item: { required: true } }
 }
 </script>
 ```
@@ -94,6 +114,52 @@ export default {
 | **change**         | *text*: Text of search input | Triggered after every change in the search input       |
 | **update-items**   | *text*: Text of search input | Same as *change*, but respecting *min-len* and *wait*  |
 
+
+## What about appearence?
+
+Just overwrite their css classes. See the structure in *stylus* lang:
+
+```stylus
+.v-autocomplete
+  .v-autocomplete-input-group
+    .v-autocomplete-input
+  .v-autocomplete-list
+    .v-autocomplete-list-item
+```
+
+Follows the css used in the [DEMO](http://paliari.github.io/v-autocomplete):
+
+```stylus
+.v-autocomplete
+  .v-autocomplete-input-group
+    .v-autocomplete-input
+      font-size 1.5em
+      padding 10px 15px
+      border-radius 5px
+      box-shadow none
+      border 2px solid #157977
+      width calc(100% - 30px)
+      outline none
+    &.v-autocomplete-selected
+      .v-autocomplete-input
+        color green
+        background-color #f2fff2
+  .v-autocomplete-list
+    width 100%
+    text-align left
+    border 1px solid #157977
+    max-height 400px
+    overflow-y auto
+    .v-autocomplete-list-item
+      cursor pointer
+      background-color #fff
+      padding 10px
+      border-bottom 1px solid #157977
+      &:last-child
+        border none
+      &:hover
+        background-color #eee
+```
 
 ## Authors
 

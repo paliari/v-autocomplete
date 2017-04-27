@@ -1,10 +1,18 @@
 <template lang="pug">
 div(style="text-align: center;")
-  h3 Type some animal name to search
+  h2 Type some animal name to search
 
   v-autocomplete(:items="items" v-model='item', :get-label='getLabel', :min-len='0' @update-items='update', :component-item='tpl')
   p Selected item:
   pre {{ item }}
+
+  hr
+  p.left.note
+    b Note:&nbsp;
+    | The v-autocomplete component not contains css, it allows to use and customize their appearence for any framework or standalone css being very flexible, just overwrite their css classes
+    br
+    b
+      a(href="https://github.com/paliari/v-autocomplete#what-about-appearence", target="_blank") See an example
 </template>
 
 <script>
@@ -38,9 +46,8 @@ export default {
 <style src="./style.css"></style>
 <style lang="stylus">
 .v-autocomplete
-  width 100%
   .v-autocomplete-input-group
-    input
+    .v-autocomplete-input
       font-size 1.5em
       padding 10px 15px
       border-radius 5px
@@ -49,7 +56,7 @@ export default {
       width calc(100% - 30px)
       outline none
     &.v-autocomplete-selected
-      input
+      .v-autocomplete-input
         color green
         background-color #f2fff2
   .v-autocomplete-list
@@ -75,10 +82,15 @@ export default {
 
 pre
   text-align left
-  margin 20px
   white-space pre-wrap
   background-color #eee
   border 1px solid silver
-  padding 15px
+  padding 20px !important
   border-radius 10px
+  font-family monospace !important
+.left
+  text-align left
+.note
+  border-left 5px solid #ccc
+  padding 10px
 </style>
