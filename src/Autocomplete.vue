@@ -47,7 +47,7 @@ export default {
     },
 
     updateItems () {
-      this.$emit('updateItems', this.searchText)
+      this.$emit('update-items', this.searchText)
     },
 
     focus () {
