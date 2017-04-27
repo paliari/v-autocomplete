@@ -1,6 +1,6 @@
 {
   "name": "v-autocomplete",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Autocomplete component for Vue.js",
   "author": "Marcos Paliari <marcos@paliari.com.br>",
   "main": "dist/v-autocomplete.js",
