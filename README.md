@@ -1,10 +1,12 @@
-# v-autocomplete
+v-autocomplete
+==============
+
 ---
 
 > Autocomplete component for Vue.js
 
-
-## Installation
+Installation
+------------
 
 ### Using yarn
 
@@ -14,12 +16,13 @@
 
 `npm i --save v-autocomplete`
 
-## Demo
+Demo
+----
 
 [DEMO](http://paliari.github.io/v-autocomplete)
 
-## Usage
-
+Usage
+-----
 
 ### Bundler (Webpack, Rollup)
 
@@ -95,27 +98,29 @@ export default {
 </script>
 ```
 
-## Properties
+Properties
+----------
 
-| Name               | Type                                | Required | Default value                  | Info                                                   |
-|--------------------|-------------------------------------|----------|--------------------------------|--------------------------------------------------------|
-| **items**          | Array                               | Yes      |                                | List items                                             |
-| **component-item** | Vue Component or Function or String | No       | Item                           | Item list template                                     |
-| **placeholder**    | String                              | No       |                                |                                                        |
-| **min-len**        | Number                              | No       | 3                              | Min length to trigger the *updateItems* event          |
-| **wait**           | String                              | No       | 500                            | Miliseconds dela to trigger the *updateItems* event    |
-| **get-label**      | Function                            | No       | function(item) { return item } | Anonymous function to extract label of the item        |
-| **value**          | Mixed                               | No       |                                | Initial value (use v-model)                            |
+| Name               | Type                                | Required | Default value                  | Info                                                |
+|--------------------|-------------------------------------|----------|--------------------------------|-----------------------------------------------------|
+| **items**          | Array                               | Yes      |                                | List items                                          |
+| **component-item** | Vue Component or Function or String | No       | Item                           | Item list template                                  |
+| **placeholder**    | String                              | No       |                                |                                                     |
+| **min-len**        | Number                              | No       | 3                              | Min length to trigger the *updateItems* event       |
+| **wait**           | String                              | No       | 500                            | Miliseconds dela to trigger the *updateItems* event |
+| **get-label**      | Function                            | No       | function(item) { return item } | Anonymous function to extract label of the item     |
+| **value**          | Mixed                               | No       |                                | Initial value (use v-model)                         |
 
-## Events
+Events
+------
 
-| Name               | Params                       | Info                                                   |
-|--------------------|------------------------------|--------------------------------------------------------|
-| **change**         | *text*: Text of search input | Triggered after every change in the search input       |
-| **update-items**   | *text*: Text of search input | Same as *change*, but respecting *min-len* and *wait*  |
+| Name             | Params                       | Info                                                  |
+|------------------|------------------------------|-------------------------------------------------------|
+| **change**       | *text*: Text of search input | Triggered after every change in the search input      |
+| **update-items** | *text*: Text of search input | Same as *change*, but respecting *min-len* and *wait* |
 
-
-## What about appearence?
+What about appearence?
+----------------------
 
 Just overwrite their css classes. See the structure in *stylus* lang:
 
@@ -135,11 +140,11 @@ Follows the css used in the [DEMO](http://paliari.github.io/v-autocomplete):
     .v-autocomplete-input
       font-size 1.5em
       padding 10px 15px
-      border-radius 5px
       box-shadow none
-      border 2px solid #157977
-      width calc(100% - 30px)
+      border 1px solid #157977
+      width calc(100% - 32px)
       outline none
+      background-color #eee
     &.v-autocomplete-selected
       .v-autocomplete-input
         color green
@@ -147,25 +152,36 @@ Follows the css used in the [DEMO](http://paliari.github.io/v-autocomplete):
   .v-autocomplete-list
     width 100%
     text-align left
-    border 1px solid #157977
+    border none
+    border-top none
     max-height 400px
     overflow-y auto
+    border-bottom 1px solid #157977
     .v-autocomplete-list-item
       cursor pointer
       background-color #fff
       padding 10px
       border-bottom 1px solid #157977
+      border-left 1px solid #157977
+      border-right 1px solid #157977
       &:last-child
-        border none
+        border-bottom none
       &:hover
         background-color #eee
+      abbr
+        opacity 0.8
+        font-size 0.8em
+        display block
+        font-family sans-serif
 ```
 
-## Authors
+Authors
+-------
 
-- [Marcos Paliari](http://paliari.com)
-- [Daniel Fernando Lourusso](http://dflourusso.com.br)
+-	[Marcos Paliari](http://paliari.com)
+-	[Daniel Fernando Lourusso](http://dflourusso.com.br)
 
-## License
+License
+-------
 
 This project is licensed under [MIT License](http://en.wikipedia.org/wiki/MIT_License)
