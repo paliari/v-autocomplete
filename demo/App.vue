@@ -50,11 +50,11 @@ export default {
     .v-autocomplete-input
       font-size 1.5em
       padding 10px 15px
-      border-radius 5px
       box-shadow none
-      border 2px solid #157977
-      width calc(100% - 30px)
+      border 1px solid #157977
+      width calc(100% - 32px)
       outline none
+      background-color #eee
     &.v-autocomplete-selected
       .v-autocomplete-input
         color green
@@ -62,16 +62,20 @@ export default {
   .v-autocomplete-list
     width 100%
     text-align left
-    border 1px solid #157977
+    border none
+    border-top none
     max-height 400px
     overflow-y auto
+    border-bottom 1px solid #157977
     .v-autocomplete-list-item
       cursor pointer
       background-color #fff
       padding 10px
       border-bottom 1px solid #157977
+      border-left 1px solid #157977
+      border-right 1px solid #157977
       &:last-child
-        border none
+        border-bottom none
       &:hover
         background-color #eee
       abbr
