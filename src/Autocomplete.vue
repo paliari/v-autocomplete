@@ -8,7 +8,7 @@
       @focus='focus'
       @input='inputChange'
     )
-  .v-autocomplete-list(v-if='showList && internalItems')
+  .v-autocomplete-list(v-if='showList && internalItems.length')
     .v-autocomplete-list-item(v-for='item in internalItems', @click='onSelectItem(item)')
       div(:is='componentItem', :item='item')
 </template>
