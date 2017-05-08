@@ -101,15 +101,16 @@ export default {
 Properties
 ----------
 
-| Name               | Type                                | Required | Default value                  | Info                                                |
-|--------------------|-------------------------------------|----------|--------------------------------|-----------------------------------------------------|
-| **items**          | Array                               | Yes      |                                | List items                                          |
-| **component-item** | Vue Component or Function or String | No       | Item                           | Item list template                                  |
-| **placeholder**    | String                              | No       |                                |                                                     |
-| **min-len**        | Number                              | No       | 3                              | Min length to trigger the *updateItems* event       |
-| **wait**           | String                              | No       | 500                            | Miliseconds dela to trigger the *updateItems* event |
-| **get-label**      | Function                            | No       | function(item) { return item } | Anonymous function to extract label of the item     |
-| **value**          | Mixed                               | No       |                                | Initial value (use v-model)                         |
+| Name                     | Type                                | Required | Default value                  | Info                                                |
+|--------------------------|-------------------------------------|----------|--------------------------------|-----------------------------------------------------|
+| **items**                | Array                               | Yes      |                                | List items                                          |
+| **component-item**       | Vue Component or Function or String | No       | Item                           | Item list template                                  |
+| **placeholder**          | String                              | No       |                                |                                                     |
+| **min-len**              | Number                              | No       | 3                              | Min length to trigger the *updateItems* event       |
+| **wait**                 | String                              | No       | 500                            | Miliseconds dela to trigger the *updateItems* event |
+| **get-label**            | Function                            | No       | function(item) { return item } | Anonymous function to extract label of the item     |
+| **value**                | Mixed                               | No       |                                | Initial value (use v-model)                         |
+| **auto-select-one-item** | Boolean                             | No       | true                           | Auto select item if result one item in items        |
 
 Events
 ------
