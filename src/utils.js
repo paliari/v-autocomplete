@@ -16,10 +16,11 @@ export default {
     }
   },
 
-  findItem (items, text, getLabel) {
+  findItem (items, text, autoSelectOneResult) {
     if (!text) return
-    if (items.length == 1) {
+    if (autoSelectOneResult && items.length == 1) {
       return items[0]
     }
   }
+
 }

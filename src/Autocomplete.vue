@@ -2,10 +2,10 @@
 .v-autocomplete
   .v-autocomplete-input-group(:class="{'v-autocomplete-selected': value}")
     input.v-autocomplete-input(type='search'
-      v-model='searchText'
-      :placeholder='placeholder'
-      @blur='blur'
-      @focus='focus'
+      v-model='searchText',
+      :placeholder='placeholder',
+      @blur='blur',
+      @focus='focus',
       @input='inputChange'
     )
   .v-autocomplete-list(v-if='showList && internalItems.length')
@@ -30,6 +30,7 @@ export default {
       default: item => item
     },
     items: Array,
+    autoSelectOneItem: { type: Boolean, default: true },
   },
   data () {
     return {
@@ -81,7 +82,7 @@ export default {
   watch: {
     items (newValue) {
       this.setItems(newValue)
-      let item = utils.findItem(this.items, this.searchText, this.getLabel)
+      let item = utils.findItem(this.items, this.searchText, this.autoSelectOneItem)
       if (item) {
         this.onSelectItem(item)
         this.showList = false
