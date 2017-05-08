@@ -4,6 +4,8 @@ v-autocomplete
 ---
 
 > Autocomplete component for Vue.js
+>
+> This component is css-free. The idea is to be used with any framework.
 
 Installation
 ------------
