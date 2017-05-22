@@ -5,6 +5,7 @@
   "author": "Marcos Paliari <marcos@paliari.com.br>",
   "main": "dist/v-autocomplete.js",
   "license": "MIT",
+  "repository": "https://github.com/paliari/v-autocomplete",
   "scripts": {
     "dist": "vue build ./src/v-autocomplete.js --config ./build.config.js --dist ./dist/ --prod --lib",
     "dist:demo": "vue build ./demo/index.js --config ./demo/build.config.js --dist ./docs/ --prod",
