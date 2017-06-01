@@ -113,6 +113,7 @@ Properties
 | **get-label**            | Function                            | No       | function(item) { return item } | Anonymous function to extract label of the item     |
 | **value**                | Mixed                               | No       |                                | Initial value (use v-model)                         |
 | **auto-select-one-item** | Boolean                             | No       | true                           | Auto select item if result one item in items        |
+| **input-class**          | String                              | No       |                                | Custom class of input search                        |
 
 Events
 ------
