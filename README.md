@@ -122,6 +122,7 @@ Events
 |------------------|------------------------------|-------------------------------------------------------|
 | **change**       | *text*: Text of search input | Triggered after every change in the search input      |
 | **update-items** | *text*: Text of search input | Same as *change*, but respecting *min-len* and *wait* |
+| **itemSelected** | *item*: Item selected | Triggered after a click on a suggestion |
 
 What about appearence?
 ----------------------
