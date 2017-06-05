@@ -120,9 +120,11 @@ Events
 
 | Name              | Params                       | Info                                                  |
 |-------------------|------------------------------|-------------------------------------------------------|
+| **input**         | *item*: Item changed         | Triggered after any changed in the model              |
 | **change**        | *text*: Text of search input | Triggered after every change in the search input      |
 | **update-items**  | *text*: Text of search input | Same as *change*, but respecting *min-len* and *wait* |
-| **item-selected** | *item*: Item selected        | Triggered after a click on a suggestion               |
+| **item-clicked**  | *item*: Item clicked         | Triggered after a click on a suggestion               |
+| **item-selected** | *item*: Item selected        | Like @input, but only when has value                  |
 
 What about appearence?
 ----------------------
