@@ -2,7 +2,7 @@
 div(style="text-align: center;")
   h2 Type some animal name to search
 
-  v-autocomplete(:items="items" v-model='item', :get-label='getLabel', :min-len='0' @update-items='update', :component-item='tpl', input-class="test-css-class", @item-selected="itemSelected")
+  v-autocomplete(:items="items" v-model='item', :get-label='getLabel', :min-len='0' @update-items='update', :component-item='tpl', input-class="test-css-class", @item-selected="itemSelected", @item-clicked="itemClicked")
   p Selected item:
   pre {{ item }}
 
@@ -32,7 +32,10 @@ export default {
   },
   methods: {
     itemSelected (item) {
-      console.log('You clicked an item!')
+      console.log('Selected item!', item)
+    },
+    itemClicked (item) {
+      console.log('You clicked an item!', item)
     },
     getLabel (item) {
       return item.name
