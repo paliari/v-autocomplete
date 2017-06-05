@@ -63,13 +63,14 @@ export default {
 
     onClickItem(item) {
       this.onSelectItem(item)
-      this.$emit('item-selected', item)
+      this.$emit('item-clicked', item)
     },
 
     onSelectItem (item) {
       if (item) {
         this.internalItems = [item]
         this.searchText = this.getLabel(item)
+        this.$emit('item-selected', item)
       } else {
         this.setItems(this.items)
       }
