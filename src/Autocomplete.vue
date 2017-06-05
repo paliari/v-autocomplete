@@ -63,7 +63,7 @@ export default {
 
     onClickItem(item) {
       this.onSelectItem(item)
-      this.$emit('itemSelected', item)
+      this.$emit('item-selected', item)
     },
 
     onSelectItem (item) {
