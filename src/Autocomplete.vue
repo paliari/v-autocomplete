@@ -10,7 +10,7 @@
       @input='inputChange'
     )
   .v-autocomplete-list(v-if='showList && internalItems.length')
-    .v-autocomplete-list-item(v-for='item in internalItems', @click='onSelectItem(item)')
+    .v-autocomplete-list-item(v-for='item in internalItems', @click='onClickItem(item)')
       div(:is='componentItem', :item='item')
 </template>
 
@@ -59,6 +59,11 @@ export default {
 
     blur () {
       setTimeout( () => this.showList = false, 200)
+    },
+
+    onClickItem(item) {
+      this.onSelectItem(item)
+      this.$emit('item-selected', item)
     },
 
     onSelectItem (item) {
