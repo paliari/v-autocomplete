@@ -44,7 +44,7 @@ export default {
   methods: {
     inputChange () {
       this.showList = true
-      this.onSelectItem(null)
+      this.onSelectItem(null, 'inputChange')
       utils.callUpdateItems(this.searchText, this.updateItems)
       this.$emit('change', this.searchText)
     },
@@ -79,6 +79,10 @@ export default {
 
     setItems (items) {
       this.internalItems = items || []
+    },
+
+    isSelecteValue (value) {
+      return 1 == this.internalItems.length && value == this.internalItems[0]
     }
 
   },
@@ -97,7 +101,9 @@ export default {
       }
     },
     value (newValue) {
-      this.onSelectItem(newValue)
+      if (!this.isSelecteValue(newValue) ) {
+        this.onSelectItem(newValue)
+      }
     }
   }
 }
