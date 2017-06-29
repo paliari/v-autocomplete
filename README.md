@@ -114,7 +114,7 @@ Properties
 | **value**                | Mixed                               | No       |                                | Initial value (use v-model)                         |
 | **auto-select-one-item** | Boolean                             | No       | true                           | Auto select item if result one item in items        |
 | **input-class**          | String                              | No       |                                | Custom class of input search                        |
-| **disabled**             | Boolean                             | No       | false                          | Disabled of input                                   |
+| **disabled**             | Boolean                             | No       | false                          | Disable input                                   |
 
 Events
 ------
