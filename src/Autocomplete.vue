@@ -4,7 +4,8 @@
     input.v-autocomplete-input(type='search'
       v-model='searchText',
       :placeholder='placeholder',
-      :class="inputClass"
+      :class="inputClass",
+      :disabled='disabled'
       @blur='blur',
       @focus='focus',
       @input='inputChange'
@@ -32,7 +33,11 @@ export default {
     },
     items: Array,
     autoSelectOneItem: { type: Boolean, default: true },
-    inputClass: String
+    inputClass: String,
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   data () {
     return {
