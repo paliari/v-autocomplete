@@ -1,18 +1,15 @@
-<template lang="pug">
-.v-autocomplete
-  .v-autocomplete-input-group(:class="{'v-autocomplete-selected': value}")
-    input.v-autocomplete-input(type='search'
-      v-model='searchText',
-      :placeholder='placeholder',
-      :class="inputClass",
-      :disabled='disabled'
-      @blur='blur',
-      @focus='focus',
-      @input='inputChange'
-    )
-  .v-autocomplete-list(v-if='showList && internalItems.length')
-    .v-autocomplete-list-item(v-for='item in internalItems', @click='onClickItem(item)')
-      div(:is='componentItem', :item='item')
+<template lang="html">
+  <div class="v-autocomplete">
+    <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
+      <input type="search" v-model="searchText" :placeholder="placeholder" :class="inputClass"
+            :disabled="disabled" @blur="blur" @focus="focus" @input="inputChange">
+    </div>
+    <div class="v-autocomplete-list" v-if="showList && internalItems.length">
+      <div class="v-autocomplete-list-item" v-for="item in internalItems" @click="onClickItem(item)">
+        <div :is="componentItem" :item="item"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -114,11 +111,14 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.v-autocomplete
-  position relative
-  .v-autocomplete-list
-    position absolute
-    .v-autocomplete-list-item
-      cursor pointer
+<style>
+  .v-autocomplete {
+    position: relative;
+  }
+  .v-autocomplete .v-autocomplete-list {
+    position: absolute;
+  }
+  .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item {
+    cursor: pointer;
+  }
 </style>

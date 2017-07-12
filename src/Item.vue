@@ -1,5 +1,5 @@
-<template lang="pug">
-div {{item}}
+<template lang="html">
+  <div>{{item}}</div>
 </template>
 
 <script>
