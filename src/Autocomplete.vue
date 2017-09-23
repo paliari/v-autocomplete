@@ -2,10 +2,12 @@
   <div class="v-autocomplete">
     <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
       <input type="search" v-model="searchText" :placeholder="placeholder" :class="inputClass"
-            :disabled="disabled" @blur="blur" @focus="focus" @input="inputChange">
+            :disabled="disabled" @blur="blur" @focus="focus" @input="inputChange"
+            @keyup.enter="keyEnter" @keyup.up="keyUp" @keyup.down="keyDown">
     </div>
     <div class="v-autocomplete-list" v-if="showList && internalItems.length">
-      <div class="v-autocomplete-list-item" v-for="item in internalItems" @click="onClickItem(item)">
+      <div class="v-autocomplete-list-item" v-for="item, i in internalItems" @click="onClickItem(item)"
+           :class="{'v-autocomplete-item-active': i === cursor}">
         <div :is="componentItem" :item="item"></div>
       </div>
     </div>
@@ -40,12 +42,14 @@ export default {
     return {
       searchText: '',
       showList: false,
+      cursor: -1,
       internalItems: this.items || []
     }
   },
   methods: {
     inputChange () {
       this.showList = true
+      this.cursor = -1
       this.onSelectItem(null, 'inputChange')
       utils.callUpdateItems(this.searchText, this.updateItems)
       this.$emit('change', this.searchText)
@@ -85,7 +89,33 @@ export default {
 
     isSelecteValue (value) {
       return 1 == this.internalItems.length && value == this.internalItems[0]
-    }
+    },
+
+    keyUp (e) {
+      if (this.cursor > -1) {
+        this.cursor--
+        this.itemView(this.$el.getElementsByClassName('v-autocomplete-list-item')[this.cursor])
+      }
+    },
+
+    keyDown (e) {
+      if (this.cursor < this.internalItems.length) {
+        this.cursor++
+        this.itemView(this.$el.getElementsByClassName('v-autocomplete-list-item')[this.cursor])
+      }
+    },
+
+    itemView (item) {
+      if (item && item.scrollIntoView) {
+        item.scrollIntoView(false)
+      }
+    },
+
+    keyEnter (e) {
+      if (this.showList && this.internalItems[this.cursor]) {
+        this.onSelectItem(this.internalItems[this.cursor])
+      }
+    },
 
   },
   created () {
@@ -117,8 +147,12 @@ export default {
   }
   .v-autocomplete .v-autocomplete-list {
     position: absolute;
+    max-height: 300px;
   }
   .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item {
     cursor: pointer;
+  }
+  .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item.v-autocomplete-item-active {
+    background-color: rgba(158, 195, 226, 0.2);
   }
 </style>
