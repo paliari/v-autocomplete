@@ -114,7 +114,7 @@ Properties
 | **value**                | Mixed                               | No       |                                | Initial value (use v-model)                         |
 | **auto-select-one-item** | Boolean                             | No       | true                           | Auto select item if result one item in items        |
 | **input-class**          | String                              | No       |                                | Custom class of input search                        |
-| **disabled**             | Boolean                             | No       | false                          | Disable input                                   |
+| **disabled**             | Boolean                             | No       | false                          | Disable input                                       |
 
 Events
 ------
@@ -138,6 +138,7 @@ Just overwrite their css classes. See the structure in *stylus* lang:
     .v-autocomplete-input
   .v-autocomplete-list
     .v-autocomplete-list-item
+      &.v-autocomplete-item-active
 ```
 
 Follows the css used in the [DEMO](http://paliari.github.io/v-autocomplete):
