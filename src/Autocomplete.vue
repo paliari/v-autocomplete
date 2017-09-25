@@ -32,7 +32,7 @@ export default {
     },
     items: Array,
     autoSelectOneItem: { type: Boolean, default: true },
-    inputClass: String,
+    inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {
       type: Boolean,
       default: false
@@ -147,12 +147,11 @@ export default {
   }
   .v-autocomplete .v-autocomplete-list {
     position: absolute;
-    max-height: 300px;
   }
   .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item {
     cursor: pointer;
   }
   .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item.v-autocomplete-item-active {
-    background-color: rgba(158, 195, 226, 0.2);
+    background-color: #eee;
   }
 </style>
