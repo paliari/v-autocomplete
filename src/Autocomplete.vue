@@ -152,6 +152,6 @@ export default {
     cursor: pointer;
   }
   .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item.v-autocomplete-item-active {
-    background-color: #eee;
+    background-color: #f3f6fa;
   }
 </style>
