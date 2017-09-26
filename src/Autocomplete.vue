@@ -114,6 +114,7 @@ export default {
     keyEnter (e) {
       if (this.showList && this.internalItems[this.cursor]) {
         this.onSelectItem(this.internalItems[this.cursor])
+        this.showList = false
       }
     },
 
