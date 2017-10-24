@@ -7,12 +7,12 @@
   "license": "MIT",
   "repository": "https://github.com/paliari/v-autocomplete",
   "scripts": {
-    "dist": "vue build ./src/v-autocomplete.js --config ./build.config.js --dist ./dist/ --prod --lib",
-    "dist:demo": "vue build ./demo/index.js --config ./demo/build.config.js --dist ./docs/ --prod",
-    "build": "npm run dist -- --disable-compress",
-    "start": "npm run dev",
-    "dev": "vue build ./demo/index.js --config ./demo/build.config.js",
-    "demo:open": "open 'http://localhost:3000/'; serve ./demo/"
+    "dist": "poi build ./src/v-autocomplete.js --format umd --module-name VAutocomplete --filename.js v-autocomplete.js --filename.css v-autocomplete.css --no-sourceMap --no-html",
+    "dist:demo": "poi build ./demo/index.js --config ./demo/build.config.js --filename.js v-autocomplete.js --filename.css v-autocomplete.css --no-sourceMap --dist ./docs",
+    "start": "yarn dev",
+    "dev": "poi build ./demo/index.js --config ./demo/build.config.js --filename.css paliari-vue.css --no-sourceMap --no-minimize --dist ./docs",
+    "release": "rm -rf dist && yarn dist",
+    "demo:open": "open 'http://localhost:5000/'; serve ./docs/"
   },
   "files": [
     "dist/"
@@ -23,5 +23,11 @@
     "vue-autocomplete",
     "autocomplete-vue",
     "v-autocomplete"
-  ]
+  ],
+  "devDependencies": {
+    "poi": "^9.4.2",
+    "pug": "^2.0.0-rc.4",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
+  }
 }
