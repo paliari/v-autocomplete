@@ -295,6 +295,7 @@ var Component = normalizeComponent(
     blur: function blur() {
       var _this = this;
 
+      this.$emit('blur', this.searchText);
       setTimeout(function () {
         return _this.showList = false;
       }, 200);
@@ -455,7 +456,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
   timeout: null,
 
   isUpdateItems: function isUpdateItems(text) {
-    if (text.length > this.minLen) {
+    if (text.length >= this.minLen) {
       return true;
     }
   },
