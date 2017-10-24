@@ -126,6 +126,7 @@ Events
 | **update-items**  | *text*: Text of search input | Same as *change*, but respecting *min-len* and *wait* |
 | **item-clicked**  | *item*: Item clicked         | Triggered after a click on a suggestion               |
 | **item-selected** | *item*: Item selected        | Like @input, but only when has value                  |
+| **blur**          | *text*: Text of search input | Triggered on blur in the search input                 |
 
 What about appearence?
 ----------------------
