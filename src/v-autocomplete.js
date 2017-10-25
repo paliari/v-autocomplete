@@ -1,6 +1,7 @@
-// need to use require instead of import (changes from babel 5 to 6)
-const Autocomplete = require('./Autocomplete.vue')
-Autocomplete.install = Vue => Vue.component(Autocomplete.name, Autocomplete)
+import Autocomplete from './Autocomplete.vue'
 // Autocomplete.version = proccess.env.VERSION
 
-module.exports = Autocomplete
+export default {
+  ...Autocomplete,
+  install: vue => vue.component(Autocomplete.name, Autocomplete)
+}
