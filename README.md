@@ -46,7 +46,7 @@ Vue.use(Autocomplete)
 <link rel="stylesheet" href="v-autocomplete/dist/v-autocomplete.css"></link>
 <script src="v-autocomplete/dist/v-autocomplete.js"></script>
 <script>
-  Vue.use(Autocomplete)
+  Vue.use(VAutocomplete.default)
 </script>
 ```
 
