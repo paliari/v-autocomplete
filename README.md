@@ -218,6 +218,8 @@ $ yarn dist
 ### Using npm
 
 ```bash
+
+# install dependencies
 $ npm install
 
 # compile demo for development
