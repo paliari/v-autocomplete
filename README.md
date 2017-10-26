@@ -204,11 +204,11 @@ $ yarn install
 # compile demo
 $ yarn dev
 
-# compile demo
-$ yarn demo
-
 # open Browser and start serve in demo
 $ yarn demo:open
+
+# compile dist demo
+$ yarn dist:demo
 
 # compile dist
 $ yarn dist
@@ -223,11 +223,11 @@ $ npm install
 # compile demo
 $ npm run dev
 
-# compile demo
-$ npm run demo
-
 # open Browser and start serve in demo
 $ npm run demo:open
+
+# compile dist demo
+$ npm run dist:demo
 
 # compile dist
 $ npm run dist
