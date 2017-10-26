@@ -201,7 +201,7 @@ $ cd v-autocomplete
 # install dependencies
 $ yarn install
 
-# compile demo
+# compile demo for development
 $ yarn dev
 
 # open Browser and start serve in demo
@@ -220,7 +220,7 @@ $ yarn dist
 ```bash
 $ npm install
 
-# compile demo
+# compile demo for development
 $ npm run dev
 
 # open Browser and start serve in demo
