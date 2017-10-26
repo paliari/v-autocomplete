@@ -3,7 +3,8 @@
     <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
       <input type="search" v-model="searchText" :placeholder="placeholder" :class="inputClass"
             :disabled="disabled" @blur="blur" @focus="focus" @input="inputChange"
-            @keyup.enter="keyEnter" @keydown.up="keyUp" @keydown.down="keyDown">
+            @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
+            @keydown.up="keyUp" @keydown.down="keyDown">
     </div>
     <div class="v-autocomplete-list" v-if="showList && internalItems.length">
       <div class="v-autocomplete-list-item" v-for="item, i in internalItems" @click="onClickItem(item)"
