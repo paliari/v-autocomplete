@@ -185,6 +185,55 @@ Follows the css used in the [DEMO](http://paliari.github.io/v-autocomplete):
         font-family sans-serif
 ```
 
+Development
+-----------
+
+```bash
+$ git clone https://github.com/paliari/v-autocomplete.git
+$ cd v-autocomplete
+
+```
+
+### Using yarn
+
+```bash
+
+# install dependencies
+$ yarn install
+
+# compile demo
+$ yarn dev
+
+# compile demo
+$ yarn demo
+
+# open Browser and start serve in demo
+$ yarn demo:open
+
+# compile dist
+$ yarn dist
+
+```
+
+### Using npm
+
+```bash
+$ npm install
+
+# compile demo
+$ npm run dev
+
+# compile demo
+$ npm run demo
+
+# open Browser and start serve in demo
+$ npm run demo:open
+
+# compile dist
+$ npm run dist
+
+```
+
 Authors
 -------
 
