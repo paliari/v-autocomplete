@@ -8,7 +8,7 @@
   "repository": "https://github.com/paliari/v-autocomplete",
   "scripts": {
     "dist": "poi build ./src/v-autocomplete.js --format umd --module-name VAutocomplete --filename.js v-autocomplete.js --filename.css v-autocomplete.css --no-sourceMap --no-html",
-    "dist:demo": "poi build ./demo/index.js --config ./demo/build.config.js --filename.js v-autocomplete.js --filename.css v-autocomplete.css --no-sourceMap --dist ./docs",
+    "dist:demo": "poi build ./demo/index.js --config ./demo/build.config.js --filename.css v-autocomplete.css --no-sourceMap --dist ./docs",
     "start": "yarn dev",
     "dev": "poi build ./demo/index.js --config ./demo/build.config.js --filename.css paliari-vue.css --no-sourceMap --no-minimize --dist ./docs",
     "release": "rm -rf dist && yarn dist",
