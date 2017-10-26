@@ -9,7 +9,7 @@ webpackJsonp([0],[
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/daniel/projetos/paliari/v-autocomplete/demo/index.js */3);
+module.exports = __webpack_require__(/*! /Users/paliari/projects/ferramentas/v-autocomplete/demo/index.js */3);
 
 
 /***/ }),
@@ -45,7 +45,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue */ 11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue */ 11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_41be6332_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-41be6332","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/template-compiler/preprocessor?engine=pug!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue */ 24);
 function injectStyle (ssrContext) {
   __webpack_require__(/*! !../node_modules/extract-text-webpack-plugin/dist/loader.js?{"omit":1,"remove":true}!vue-style-loader!css-loader?{"autoprefixer":false,"sourceMap":false,"minimize":false}!../node_modules/vue-loader/lib/style-compiler/index?{"vue":true,"id":"data-v-41be6332","scoped":false,"hasInlineConfig":true}!./style.css */ 9)
@@ -65,7 +65,7 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_41be6332_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
@@ -100,9 +100,9 @@ var Component = normalizeComponent(
 
 /***/ }),
 /* 11 */
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./demo/App.vue ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./demo/App.vue ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -172,7 +172,7 @@ var Component = normalizeComponent(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Autocomplete_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./Autocomplete.vue */ 14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Autocomplete_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./Autocomplete.vue */ 14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1952fbe5_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Autocomplete_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-1952fbe5","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./Autocomplete.vue */ 19);
 function injectStyle (ssrContext) {
   __webpack_require__(/*! !../node_modules/extract-text-webpack-plugin/dist/loader.js?{"omit":1,"remove":true}!vue-style-loader!css-loader?{"autoprefixer":false,"sourceMap":false,"minimize":false}!../node_modules/vue-loader/lib/style-compiler/index?{"vue":true,"id":"data-v-1952fbe5","scoped":false,"hasInlineConfig":true}!../node_modules/vue-loader/lib/selector?type=styles&index=0!./Autocomplete.vue */ 13)
@@ -191,7 +191,7 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Autocomplete_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Autocomplete_vue__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1952fbe5_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Autocomplete_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
@@ -215,9 +215,9 @@ var Component = normalizeComponent(
 
 /***/ }),
 /* 14 */
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/Autocomplete.vue ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/Autocomplete.vue ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -378,7 +378,7 @@ var Component = normalizeComponent(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Item_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./Item.vue */ 16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Item_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./Item.vue */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_49f92e90_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Item_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-49f92e90","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./Item.vue */ 17);
 var normalizeComponent = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 0)
 /* script */
@@ -394,7 +394,7 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Item_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_Item_vue__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_49f92e90_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Item_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
@@ -407,9 +407,9 @@ var Component = normalizeComponent(
 
 /***/ }),
 /* 16 */
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/Item.vue ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/Item.vue ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -485,7 +485,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-autocomplete"},[_c('div',{staticClass:"v-autocomplete-input-group",class:{'v-autocomplete-selected': _vm.value}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchText),expression:"searchText"}],class:_vm.inputClass,attrs:{"type":"search","placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":(_vm.searchText)},on:{"blur":_vm.blur,"focus":_vm.focus,"input":[function($event){if($event.target.composing){ return; }_vm.searchText=$event.target.value},_vm.inputChange],"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.keyEnter($event)},"keydown":[function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"tab",9,$event.key)){ return null; }_vm.keyEnter($event)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"up",38,$event.key)){ return null; }_vm.keyUp($event)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"down",40,$event.key)){ return null; }_vm.keyDown($event)}]}})]),_vm._v(" "),(_vm.showList && _vm.internalItems.length)?_c('div',{staticClass:"v-autocomplete-list"},_vm._l((_vm.internalItems),function(item, i){return _c('div',{staticClass:"v-autocomplete-list-item",class:{'v-autocomplete-item-active': i === _vm.cursor},on:{"click":function($event){_vm.onClickItem(item)}}},[_c(_vm.componentItem,{tag:"div",attrs:{"item":item}})])})):_vm._e()])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-autocomplete"},[_c('div',{staticClass:"v-autocomplete-input-group",class:{'v-autocomplete-selected': _vm.value}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchText),expression:"searchText"}],class:_vm.inputClass,attrs:{"type":"search","placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":(_vm.searchText)},on:{"blur":_vm.blur,"focus":_vm.focus,"input":[function($event){if($event.target.composing){ return; }_vm.searchText=$event.target.value},_vm.inputChange],"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key)){ return null; }_vm.keyEnter($event)},"keydown":[function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"tab",9,$event.key)){ return null; }_vm.keyEnter($event)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"up",38,$event.key)){ return null; }_vm.keyUp($event)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"down",40,$event.key)){ return null; }_vm.keyDown($event)}]}})]),_vm._v(" "),(_vm.showList && _vm.internalItems.length)?_c('div',{staticClass:"v-autocomplete-list"},_vm._l((_vm.internalItems),function(item, i){return _c('div',{staticClass:"v-autocomplete-list-item",class:{'v-autocomplete-item-active': i === _vm.cursor},on:{"click":function($event){_vm.onClickItem(item)},"mouseover":function($event){_vm.cursor = i}}},[_c(_vm.componentItem,{tag:"div",attrs:{"item":item}})])})):_vm._e()])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -500,7 +500,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_TplItem_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./TplItem.vue */ 21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_TplItem_vue__ = __webpack_require__(/*! !babel-loader?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!../node_modules/vue-loader/lib/selector?type=script&index=0!./TplItem.vue */ 21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_506c162e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_TplItem_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-506c162e","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/template-compiler/preprocessor?engine=pug!../node_modules/vue-loader/lib/selector?type=template&index=0!./TplItem.vue */ 22);
 var normalizeComponent = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 0)
 /* script */
@@ -516,7 +516,7 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_daniel_projetos_paliari_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_TplItem_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_true_babelrc_false_presets_Users_paliari_projects_ferramentas_v_autocomplete_node_modules_babel_preset_vue_app_dist_index_common_js_useBuiltIns_true_node_modules_vue_loader_lib_selector_type_script_index_0_TplItem_vue__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_506c162e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_TplItem_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
@@ -529,9 +529,9 @@ var Component = normalizeComponent(
 
 /***/ }),
 /* 21 */
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/daniel/projetos/paliari/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./demo/TplItem.vue ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib?{"cacheDirectory":true,"babelrc":false,"presets":[["/Users/paliari/projects/ferramentas/v-autocomplete/node_modules/babel-preset-vue-app/dist/index.common.js",{"useBuiltIns":true}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./demo/TplItem.vue ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
