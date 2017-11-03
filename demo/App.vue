@@ -2,7 +2,7 @@
 div(style="text-align: center;")
   h2 Type some animal name to search
 
-  v-autocomplete(:items="items", :input-id="'animalistic'", v-model='item', :get-label='getLabel', :min-len='0' @update-items='update', :component-item='tpl', @item-selected="itemSelected", @item-clicked="itemClicked")
+  v-autocomplete(:items="items", :input-id="'animalistic'", :input-name="'animalistic'", v-model='item', :get-label='getLabel', :min-len='0' @update-items='update', :component-item='tpl', @item-selected="itemSelected", @item-clicked="itemClicked")
   p Selected item:
   pre {{ item }}
 
