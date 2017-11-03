@@ -95,7 +95,10 @@ export default {
 
 <script>
 export default {
-  props: { item: { required: true } }
+  props: { 
+    item: { required: true },
+    searchText: { required: true }
+  }
 }
 </script>
 ```
