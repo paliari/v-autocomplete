@@ -1,8 +1,11 @@
 <template lang="html">
   <div class="v-autocomplete">
     <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
-      <input type="search" v-model="searchText" :placeholder="placeholder" :class="inputClass"
-            :disabled="disabled" @blur="blur" @focus="focus" @input="inputChange"
+      <input type="search" v-model="searchText" v-bind="inputAttrs" 
+            :class="inputAttrs.class || inputClass"
+            :placeholder="inputAttrs.placeholder || placeholder"
+            :disabled="inputAttrs.disabled || disabled"
+            @blur="blur" @focus="focus" @input="inputChange"
             @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
             @keydown.up="keyUp" @keydown.down="keyDown">
     </div>
@@ -23,7 +26,6 @@ export default {
   name: 'v-autocomplete',
   props: {
     componentItem: { default: () => Item },
-    placeholder: String,
     minLen: { type: Number, default: utils.minLen },
     wait: { type: Number, default: utils.wait },
     value: null,
@@ -33,11 +35,10 @@ export default {
     },
     items: Array,
     autoSelectOneItem: { type: Boolean, default: true },
+    placeholder: String,
     inputClass: {type: String, default: 'v-autocomplete-input'},
-    disabled: {
-      type: Boolean,
-      default: false
-    }
+    disabled: {type: Boolean, default: false},
+    inputAttrs: {type: Object, default: {}},
   },
   data () {
     return {
