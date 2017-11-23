@@ -9,7 +9,7 @@
             @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
             @keydown.up="keyUp" @keydown.down="keyDown">
     </div>
-    <div class="v-autocomplete-list" v-if="showList && internalItems.length">
+    <div class="v-autocomplete-list" v-if="show">
       <div class="v-autocomplete-list-item" v-for="item, i in internalItems" @click="onClickItem(item)"
            :class="{'v-autocomplete-item-active': i === cursor}" @mouseover="cursor = i">
         <div :is="componentItem" :item="item" :searchText="searchText"></div>
@@ -39,6 +39,7 @@ export default {
     inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {type: Boolean, default: false},
     inputAttrs: {type: Object, default: {}},
+    keepOpen: {type: Boolean, default: false}
   },
   data () {
     return {
@@ -46,6 +47,14 @@ export default {
       showList: false,
       cursor: -1,
       internalItems: this.items || []
+    }
+  },
+  computed: {
+    hasItems () {
+      return !!this.internalItems.length
+    },
+    show () {
+      return (this.showList && this.hasItems) || (this.keepOpen && this.hasItems)
     }
   },
   methods: {
