@@ -116,6 +116,7 @@ Properties
 | **value**                | Mixed                               | No       |                                | Initial value (use v-model)                                                                            |
 | **auto-select-one-item** | Boolean                             | No       | true                           | Auto select item if result one item in items                                                           |
 | **input-attrs**          | Object                              | No       | {}                             | Attributes for input                                                                                   |
+| **keep-open**            | Boolean                             | No       | false                          | If true, suggestions list stays open even when input is not active |
 | **placeholder**          | String                              | No       |                                | **Deprecated**, will be removed in the next version. Use **input-attrs**                               |
 | **input-class**          | String                              | No       |                                | Custom class of input search. **Deprecated**, will be removed in the next version. Use **input-attrs** |
 | **disabled**             | Boolean                             | No       | false                          | Disable input. **Deprecated**, will be removed in the next version. Use **input-attrs**                |
