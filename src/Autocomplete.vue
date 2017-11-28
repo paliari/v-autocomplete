@@ -54,7 +54,7 @@ export default {
       return !!this.internalItems.length
     },
     show () {
-      return (this.showList && this.hasItems) || (this.keepOpen && this.hasItems)
+      return (this.showList && this.hasItems) || this.keepOpen
     }
   },
   methods: {
