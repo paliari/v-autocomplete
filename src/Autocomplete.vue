@@ -38,7 +38,7 @@ export default {
     placeholder: String,
     inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {type: Boolean, default: false},
-    inputAttrs: {type: Object, default: {}},
+    inputAttrs: {type: Object, default: () => {return {}},
     keepOpen: {type: Boolean, default: false}
   },
   data () {
