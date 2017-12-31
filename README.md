@@ -1,4 +1,4 @@
-v-autocomplete
+v-autocomplete-with-options (forked from [v-autocomplete](https://github.com/paliari/v-autocomplete))
 ==============
 
 ---
