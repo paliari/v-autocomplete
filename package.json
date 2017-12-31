@@ -1,11 +1,11 @@
 {
-  "name": "v-autocomplete",
-  "version": "1.8.1",
-  "description": "Autocomplete component for Vue.js",
-  "author": "Marcos Paliari <marcos@paliari.com.br>",
+  "name": "v-autocomplete-with-options",
+  "version": "0.0.1",
+  "description": "Autocomplete component for Vue.js, forked from v-autocomplete of paliari",
+  "author": "Steven Dao <iamstevendao@gmail.com>",
   "main": "dist/v-autocomplete.js",
   "license": "MIT",
-  "repository": "https://github.com/paliari/v-autocomplete",
+  "repository": "https://github.com/iamstevendao/v-autocomplete",
   "scripts": {
     "dist": "poi build ./src/v-autocomplete.js --format umd --module-name VAutocomplete --filename.js v-autocomplete.js --filename.css v-autocomplete.css --no-sourceMap --no-html",
     "dist:demo": "poi build ./demo/index.js --config ./demo/build.config.js --filename.css v-autocomplete.css --no-sourceMap --dist ./docs",
