@@ -38,7 +38,11 @@ export default {
       console.log('You clicked an item!', item)
     },
     getLabel (item) {
-      return item.name
+      if (item) {
+        return item.name
+      }
+
+      return ''
     },
     update (text) {
       this.items = Animals.filter((item) => {
