@@ -39,7 +39,8 @@ export default {
     inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {type: Boolean, default: false},
     inputAttrs: {type: Object, default: () => {return {}}},
-    keepOpen: {type: Boolean, default: false}
+    keepOpen: {type: Boolean, default: false},
+    isAutocompleted: { type: Boolean, default: true } // in case some users dont need the autocomplete feature (like me)
   },
   data () {
     return {
@@ -139,10 +140,13 @@ export default {
   watch: {
     items (newValue) {
       this.setItems(newValue)
-      let item = utils.findItem(this.items, this.searchText, this.autoSelectOneItem)
-      if (item) {
-        this.onSelectItem(item)
-        this.showList = false
+
+      if(this.isAutocompleted) {
+        let item = utils.findItem(this.items, this.searchText, this.autoSelectOneItem)
+        if (item) {
+          this.onSelectItem(item)
+          this.showList = false
+        }
       }
     },
     value (newValue) {
