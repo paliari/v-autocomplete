@@ -39,7 +39,8 @@ export default {
     inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {type: Boolean, default: false},
     inputAttrs: {type: Object, default: () => {return {}}},
-    keepOpen: {type: Boolean, default: false}
+    keepOpen: {type: Boolean, default: false},
+    visibleItems: null
   },
   data () {
     return {
@@ -96,6 +97,10 @@ export default {
     },
 
     setItems (items) {
+      if(this.visibleItems){
+        this.internalItems = items.slice(0, this.visibleItems) || [];
+        return;
+      }
       this.internalItems = items || []
     },
 
