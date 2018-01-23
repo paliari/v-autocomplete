@@ -54,7 +54,7 @@ Vue.use(Autocomplete)
 
 ```html
 <template>
-  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems">
+  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :visible-items=10 :component-item='template' @update-items="updateItems">
   </v-autocomplete>
 </template>
 
