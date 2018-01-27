@@ -71,6 +71,7 @@ export default {
     },
 
     focus () {
+      this.$emit('focus', this.searchText)
       this.showList = true
     },
 

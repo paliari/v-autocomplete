@@ -132,6 +132,7 @@ Events
 | **item-clicked**  | *item*: Item clicked         | Triggered after a click on a suggestion               |
 | **item-selected** | *item*: Item selected        | Like @input, but only when has value                  |
 | **blur**          | *text*: Text of search input | Triggered on blur in the search input                 |
+| **focus**         | *text*: Text of search input | Triggered on focus in the search input                |
 
 What about appearence?
 ----------------------
