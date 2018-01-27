@@ -39,7 +39,8 @@ export default {
     inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {type: Boolean, default: false},
     inputAttrs: {type: Object, default: () => {return {}}},
-    keepOpen: {type: Boolean, default: false}
+    keepOpen: {type: Boolean, default: false},
+    visibleItems: null
   },
   data () {
     return {
@@ -97,7 +98,10 @@ export default {
     },
 
     setItems (items) {
-      this.internalItems = items || []
+      var items_length = items.length;
+      if(!isNaN(this.visibleItems))
+        items_length = this.visibleItems;
+      this.internalItems = items.slice(0, items_length) || [];
     },
 
     isSelecteValue (value) {
@@ -136,6 +140,10 @@ export default {
     utils.minLen = this.minLen
     utils.wait = this.wait
     this.onSelectItem(this.value)
+
+    if(isNaN(this.visibleItems)){
+      console.warn("Please enter valid number in visible-items.")
+    }
   },
   watch: {
     items (newValue) {

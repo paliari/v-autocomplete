@@ -54,7 +54,7 @@ Vue.use(Autocomplete)
 
 ```html
 <template>
-  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems">
+  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :visible-items=10 :component-item='template' @update-items="updateItems">
   </v-autocomplete>
 </template>
 
@@ -110,6 +110,7 @@ Properties
 | ------------------------ | ----------------------------------- | -------- | ------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | **items**                | Array                               | Yes      |                                | List items                                                                                             |
 | **component-item**       | Vue Component or Function or String | No       | Item                           | Item list template                                                                                     |
+| **visible-items**        | Number                              | No       |                                | Number of items to show in dropdown menu                                                               |
 | **min-len**              | Number                              | No       | 3                              | Min length to trigger the *updateItems* event                                                          |
 | **wait**                 | String                              | No       | 500                            | Miliseconds dela to trigger the *updateItems* event                                                    |
 | **get-label**            | Function                            | No       | function(item) { return item } | Anonymous function to extract label of the item                                                        |
