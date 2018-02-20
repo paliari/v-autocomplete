@@ -100,7 +100,7 @@ export default {
       this.internalItems = items || []
     },
 
-    isSelecteValue (value) {
+    isSelectedValue (value) {
       return 1 == this.internalItems.length && value == this.internalItems[0]
     },
 
@@ -147,7 +147,7 @@ export default {
       }
     },
     value (newValue) {
-      if (!this.isSelecteValue(newValue) ) {
+      if (!this.isSelectedValue(newValue) ) {
         this.onSelectItem(newValue)
         this.searchText = this.getLabel(newValue)
       }
