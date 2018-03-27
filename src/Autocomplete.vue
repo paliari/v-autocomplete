@@ -6,7 +6,7 @@
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
             @blur="blur" @focus="focus" @input="inputChange"
-            @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
+            @keydown.enter="keyEnter" @keydown.tab="keyEnter" 
             @keydown.up="keyUp" @keydown.down="keyDown">
     </div>
     <div class="v-autocomplete-list" v-if="show">
@@ -128,6 +128,8 @@ export default {
       if (this.showList && this.internalItems[this.cursor]) {
         this.onSelectItem(this.internalItems[this.cursor])
         this.showList = false
+
+        e.preventDefault();
       }
     },
 
