@@ -1,12 +1,12 @@
 <template lang="html">
   <div class="v-autocomplete">
     <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
-      <input type="search" v-model="searchText" v-bind="inputAttrs" 
+      <input type="search" v-model="searchText" v-bind="inputAttrs"
             :class="inputAttrs.class || inputClass"
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
             @blur="blur" @focus="focus" @input="inputChange"
-            @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
+            @keyup.enter="keyEnter" @keydown.tab="keyEnter"
             @keydown.up="keyUp" @keydown.down="keyDown">
     </div>
     <div class="v-autocomplete-list" v-if="show">
@@ -36,6 +36,7 @@ export default {
     items: Array,
     autoSelectOneItem: { type: Boolean, default: true },
     placeholder: String,
+    inverted: {type: Boolean, default: false},
     inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {type: Boolean, default: false},
     inputAttrs: {type: Object, default: () => {return {}}},
@@ -98,6 +99,9 @@ export default {
 
     setItems (items) {
       this.internalItems = items || []
+      if (this.inverted) {
+        this.cursor = this.internalItems.length;
+      }
     },
 
     isSelectedValue (value) {
