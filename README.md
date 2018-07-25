@@ -134,6 +134,28 @@ Events
 | **blur**          | *text*: Text of search input | Triggered on blur in the search input                 |
 | **focus**         | *text*: Text of search input | Triggered on focus in the search input                |
 
+Refs
+----
+There is a single ref directive named 'input' on the input field, which can 
+be used, for example, to set focus on the field:
+
+```html
+<template>
+  <v-autocomplete ref="my-autocomplete" ...>
+  </v-autocomplete>
+</template>
+
+<script>
+  ... 
+  methods: {
+    setFocus () {
+      this.$refs['my-autocomplete'].$refs['input'].focus()
+    }
+  }
+  ...
+</script>
+```
+
 What about appearence?
 ----------------------
 
