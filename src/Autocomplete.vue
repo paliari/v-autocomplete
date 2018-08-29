@@ -153,6 +153,11 @@ export default {
         this.onSelectItem(newValue)
         this.searchText = this.getLabel(newValue)
       }
+    },
+    showList (newValue) {
+      if (newValue) {
+        this.$emit('on-show', newValue)
+      }
     }
   }
 }
