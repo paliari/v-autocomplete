@@ -13,8 +13,15 @@
       <div class="v-autocomplete-list-item" v-for="item, i in internalItems" @click="onClickItem(item)"
            :class="{'v-autocomplete-item-active': i === cursor}" @mouseover="cursor = i">
         <div :is="componentItem" :item="item" :searchText="searchText"></div>
-      </div>
+      </div>      
     </div>
+    <slot name="empty-message" v-if="searchText !== '' && internalItems.length === 0">
+      <div class="v-autocomplete-list">
+        <div class="v-autocomplete-list-item item-not-found">
+          {{ emptyMessage }}
+        </div>
+      </div>
+    </slot>
   </div>
 </template>
 
@@ -25,6 +32,7 @@ import utils from './utils.js'
 export default {
   name: 'v-autocomplete',
   props: {
+    emptyMessage: { type: String, default: 'No results found.' },
     componentItem: { default: () => Item },
     minLen: { type: Number, default: utils.minLen },
     wait: { type: Number, default: utils.wait },
@@ -168,5 +176,8 @@ export default {
   }
   .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item.v-autocomplete-item-active {
     background-color: #f3f6fa;
+  }
+  .v-autocomplete .v-autocomplete-list .v-autocomplete-list-item.item-not-found {
+    text-align: center;
   }
 </style>
