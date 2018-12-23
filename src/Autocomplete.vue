@@ -9,7 +9,7 @@
             @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
             @keydown.up="keyUp" @keydown.down="keyDown">
     </div>
-    <div class="v-autocomplete-list" v-if="show">
+    <div class="v-autocomplete-list" v-if="show && internalItems.length > 0">
       <div class="v-autocomplete-list-item" v-for="item, i in internalItems" @click="onClickItem(item)"
            :class="{'v-autocomplete-item-active': i === cursor}" @mouseover="cursor = i">
         <div :is="componentItem" :item="item" :searchText="searchText"></div>
