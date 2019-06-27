@@ -70,7 +70,10 @@ export default {
   },
   methods: {
     getLabel (item) {
-      return item.name
+      if (item) {
+        return item.name
+      }      
+      return '';
     },
     updateItems (text) {
       yourGetItemsMethod(text).then( (response) => {
