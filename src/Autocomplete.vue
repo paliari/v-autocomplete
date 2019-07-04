@@ -118,11 +118,25 @@ export default {
       }
     },
 
-    itemView (item) {
-      if (item && item.scrollIntoView) {
-        item.scrollIntoView(false)
-      }
-    },
+      itemView (item) {
+        if (!item || !item.scrollIntoView) {
+          return;
+        }
+
+        let viewport = {};
+        viewport.top = window.pageYOffset;
+        viewport.bottom = viewport.top + window.innerHeight;
+  
+        let bounds = {};
+        bounds.top = item.getBoundingClientRect().top + window.pageYOffset
+        bounds.bottom = bounds.top + item.clientHeight;
+
+        if (bounds.top < viewport.top) {
+          item.scrollIntoView(true);
+        } else if (bounds.bottom > viewport.bottom) {
+          item.scrollIntoView(false);
+        }       
+      },
 
     keyEnter (e) {
       if (this.showList && this.internalItems[this.cursor]) {
