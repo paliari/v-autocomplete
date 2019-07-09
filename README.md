@@ -120,6 +120,7 @@ Properties
 | **placeholder**          | String                              | No       |                                | **Deprecated**, will be removed in the next version. Use **input-attrs**                               |
 | **input-class**          | String                              | No       |                                | Custom class of input search. **Deprecated**, will be removed in the next version. Use **input-attrs** |
 | **disabled**             | Boolean                             | No       | false                          | Disable input. **Deprecated**, will be removed in the next version. Use **input-attrs**                |
+| **inverted**             | Boolean                             | No       | false                          | Invert the behavior of the cursor. If true, the cursor will start at the end of the list instead of the beginning. |
 
 Events
 ------
