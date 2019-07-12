@@ -9,6 +9,10 @@ export default {
     }
   },
 
+  clearTimeout() {
+    clearTimeout(this.timeout)
+  },
+
   callUpdateItems (text, cb) {
     clearTimeout(this.timeout)
     if (this.isUpdateItems(text)) {

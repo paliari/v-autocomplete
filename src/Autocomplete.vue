@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="v-autocomplete">
     <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
-      <input type="search" v-model="searchText" v-bind="inputAttrs" 
+      <input type="search" v-model="searchText" v-bind="inputAttrs"
             :class="inputAttrs.class || inputClass"
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
@@ -61,7 +61,7 @@ export default {
     inputChange () {
       this.showList = true
       this.cursor = -1
-      this.onSelectItem(null, 'inputChange')
+      this.onSelectItem(undefined)
       utils.callUpdateItems(this.searchText, this.updateItems)
       this.$emit('change', this.searchText)
     },
@@ -86,14 +86,8 @@ export default {
     },
 
     onSelectItem (item) {
-      if (item) {
-        this.internalItems = [item]
-        this.searchText = this.getLabel(item)
+        this.$emit('input', item)
         this.$emit('item-selected', item)
-      } else {
-        this.setItems(this.items)
-      }
-      this.$emit('input', item)
     },
 
     setItems (items) {
@@ -135,7 +129,6 @@ export default {
   created () {
     utils.minLen = this.minLen
     utils.wait = this.wait
-    this.onSelectItem(this.value)
   },
   watch: {
     items (newValue) {
@@ -146,10 +139,13 @@ export default {
         this.showList = false
       }
     },
-    value (newValue) {
-      if (!this.isSelectedValue(newValue) ) {
-        this.onSelectItem(newValue)
-        this.searchText = this.getLabel(newValue)
+    value (newValue) {      
+      this.internalItems = newValue != null ? [newValue] : []
+      utils.clearTimeout()
+      this.searchText = this.getLabel(newValue)
+
+      if (!this.isSelectedValue(newValue)) {
+        this.$emit('item-selected', newValue)
       }
     }
   }
