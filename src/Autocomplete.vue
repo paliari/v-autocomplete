@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="v-autocomplete">
     <div class="v-autocomplete-input-group" :class="{'v-autocomplete-selected': value}">
-      <input type="search" v-model="searchText" v-bind="inputAttrs" 
+      <input type="search" :value="searchText" v-bind="inputAttrs" 
             :class="inputAttrs.class || inputClass"
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
@@ -58,7 +58,8 @@ export default {
     }
   },
   methods: {
-    inputChange () {
+    inputChange (e) {
+      this.searchText = e.target.value;
       this.showList = true
       this.cursor = -1
       this.onSelectItem(null, 'inputChange')
