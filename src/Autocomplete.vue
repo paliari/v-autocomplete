@@ -43,7 +43,7 @@ export default {
   },
   data () {
     return {
-      searchText: '',
+      searchText: this.inputAttrs.value || '',
       showList: false,
       cursor: -1,
       internalItems: this.items || []
