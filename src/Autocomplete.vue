@@ -5,7 +5,6 @@
             :class="inputAttrs.class || inputClass"
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
-            :value="inputAttrs.value || ''"
             @blur="blur" @focus="focus" @input="inputChange"
             @keyup.enter="keyEnter" @keydown.tab="keyEnter" 
             @keydown.up="keyUp" @keydown.down="keyDown">
@@ -44,7 +43,7 @@ export default {
   },
   data () {
     return {
-      searchText: '',
+      searchText: inputAttrs.value || '',
       showList: false,
       cursor: -1,
       internalItems: this.items || []
