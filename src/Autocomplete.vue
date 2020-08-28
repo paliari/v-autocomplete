@@ -72,7 +72,7 @@ export default {
 
     focus () {
       this.$emit('focus', this.searchText)
-      this.showList = true
+      this.showList = Boolean(this.items.length)
     },
 
     blur () {
