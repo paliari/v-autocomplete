@@ -27,7 +27,7 @@
   "devDependencies": {
     "poi": "^9.4.3",
     "pug": "^2.0.0-rc.4",
-    "serve": "^7.0.0",
+    "serve": "^10.1.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
   }
